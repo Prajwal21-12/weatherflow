@@ -1,3 +1,6 @@
+## Live Demo
+[Open WeatherFlow](https://prajwal21-12.github.io/weatherflow/)
+
 WeatherFlow 🌤️
 
 A real-time weather forecast application built using HTML, CSS, and JavaScript.
