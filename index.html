@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeatherFlow | Weather Forecast</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>WeatherFlow <span>☀️</span></h1>
+      <p>Real-time weather & 5-day forecast</p>
+    </header>
+
+    <form id="search-form" class="search-form">
+      <input
+        id="city-input"
+        type="text"
+        placeholder="Enter a city, e.g. Bengaluru"
+        aria-label="City name"
+        required
+      />
+      <button id="search-btn" type="submit">Search</button>
+    </form>
+
+    <div id="loading" class="loading" hidden>
+    <div class="spinner"></div>
+    <p>Fetching weather data...</p>
+    </div>
+    <p id="message" role="status" aria-live="polite"></p>
+
+    <section id="current-weather" class="weather-card" hidden>
+      <div class="current-top">
+        <div>
+          <p id="city-name"></p>
+          <p id="weather-description"></p>
+          <h2><span id="temperature"></span>°C</h2>
+          <p>Feels like <span id="feels-like"></span>°C</p>
+        </div>
+        <img id="weather-icon" alt="Weather icon" />
+      </div>
+
+      <div class="metrics">
+        <article class="metric">
+          <span>💧 Humidity</span>
+          <strong id="humidity"></strong>
+        </article>
+        <article class="metric">
+          <span>💨 Wind speed</span>
+          <strong id="wind-speed"></strong>
+        </article>
+        <article class="metric">
+          <span>🌡️ Pressure</span>
+          <strong id="pressure"></strong>
+        </article>
+      </div>
+    </section>
+
+    <section id="forecast-section" hidden>
+      <h2>5-Day Forecast</h2>
+      <div id="forecast" class="forecast-grid"></div>
+    </section>
+
+    <footer>WeatherFlow · Powered by OpenWeatherMap</footer>
+  </main>
+</body>
+</html>
